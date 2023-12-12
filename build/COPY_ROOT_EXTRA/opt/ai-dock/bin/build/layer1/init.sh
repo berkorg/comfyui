@@ -3,10 +3,14 @@
 # Use this layer to add nodes and models
 
 NODES=(
+    "https://github.com/Acly/comfyui-tooling-nodes"
+    "https://github.com/Fannovel16/comfyui_controlnet_aux"
+    "https://github.com/wmatson/easy-comfy-nodes"
     #"https://github.com/ltdrdata/ComfyUI-Manager"
 )
 
 CHECKPOINT_MODELS=(
+    "https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
     #"https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt"
     #"https://huggingface.co/stabilityai/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt"
     #"https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/resolve/main/sd_xl_base_1.0.safetensors"
@@ -14,6 +18,8 @@ CHECKPOINT_MODELS=(
 )
 
 LORA_MODELS=(
+    "https://civitai.com/api/download/models/177492?type=Model&format=SafeTensor"
+    "https://huggingface.co/latent-consistency/lcm-lora-sdxl/resolve/main/pytorch_lora_weights.safetensors"
     #"https://civitai.com/api/download/models/16576"
 )
 
@@ -30,6 +36,7 @@ ESRGAN_MODELS=(
 )
 
 CONTROLNET_MODELS=(
+    "https://huggingface.co/TencentARC/t2i-adapter-sketch-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_canny-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_depth-fp16.safetensors"
     #"https://huggingface.co/kohya-ss/ControlNet-diff-modules/resolve/main/diff_control_sd15_depth_fp16.safetensors"

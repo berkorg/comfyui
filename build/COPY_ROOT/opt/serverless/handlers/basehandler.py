@@ -152,9 +152,9 @@ class BaseHandler:
                     key = f"{self.request_id}/{image['filename']}"
                     self.result["images"].append({
                         "local_path": new_path,
-                        #"base64": self.image_to_base64(path),
+                        "base64": self.image_to_base64(new_path),
                         # make this work first, then threads
-                        "url": self.s3utils.file_upload(new_path, key)
+                        # "url": self.s3utils.file_upload(new_path, key)
                     })
         
         self.job_time_completed = datetime.datetime.now()
