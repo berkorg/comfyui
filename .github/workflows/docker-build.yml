@@ -24,20 +24,14 @@ jobs:
       matrix:
         base:
           - "pytorch"
-          - "jupyter-pytorch"
         python:
           - "3.10"
         pytorch:
-          - "2.0.1"
           - "2.1.1"
         cuda:
           - "11.8.0"
-          - "12.1.0"
         level:
           - "base"
-        exclude:
-          - cuda: "12.1.0"
-            pytorch: "2.0.1"
     steps:
       -
         name: Free Space
@@ -82,7 +76,7 @@ jobs:
         with:
           context: build
           build-args: |
-            IMAGE_BASE=ghcr.io/ai-dock/${{ matrix.base }}:${{ matrix.pytorch }}-py${{ matrix.python }}-cuda-${{ matrix.cuda }}-${{ matrix.level }}-${{ env.UBUNTU_VERSION }}
+            IMAGE_BASE=ghcr.io/berkorg/comfyui:${{ matrix.base }}:${{ matrix.pytorch }}-py${{ matrix.python }}-cuda-${{ matrix.cuda }}-${{ matrix.level }}-${{ env.UBUNTU_VERSION }}
             PYTORCH_VERSION=${{ matrix.pytorch }}
           push: true
           provenance: false
