@@ -21,7 +21,7 @@ CHECKPOINT_MODELS=(
 
 
 LORA_MODELS=(
-    "https://huggingface.co/latent-consistency/lcm-lora-sdv1-5/blob/main/pytorch_lora_weights.safetensors lcm_1_5_lora.safetensors"
+    "https://huggingface.co/latent-consistency/lcm-lora-sdv1-5/resolve/main/pytorch_lora_weights.safetensors lcm_1_5_lora.safetensors"
     "https://civitai.com/api/download/models/234720?type=Model&format=SafeTensor lora_3d_1_5.safetensors"
     "https://civitai.com/api/download/models/177492?type=Model&format=SafeTensor LogoRedmondV2-Logo-LogoRedmAF.safetensors"
     "https://huggingface.co/latent-consistency/lcm-lora-sdxl/resolve/main/pytorch_lora_weights.safetensors pytorch_lora_weights.safetensors"
