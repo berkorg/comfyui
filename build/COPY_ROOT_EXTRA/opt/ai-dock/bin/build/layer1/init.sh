@@ -40,7 +40,7 @@ ESRGAN_MODELS=(
     #"https://huggingface.co/Akumetsu971/SD_Anime_Futuristic_Armor/resolve/main/4x_NMKD-Siax_200k.pth"
 )
 CONTROLNET_MODELS=(
-    "https://huggingface.co/TencentARC/T2I-Adapter/blob/main/models/t2iadapter_canny_sd15v2.pth t2i_1_5_canny.pth"
+    "https://huggingface.co/TencentARC/T2I-Adapter/resolve/main/models/t2iadapter_canny_sd15v2.pth t2i_1_5_canny.pth"
     "https://huggingface.co/TencentARC/t2i-adapter-sketch-sdxl-1.0/resolve/main/diffusion_pytorch_model.safetensors diffusion_pytorch_model.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_canny-fp16.safetensors"
     #"https://huggingface.co/webui/ControlNet-modules-safetensors/resolve/main/control_depth-fp16.safetensors"
