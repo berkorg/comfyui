@@ -22,10 +22,10 @@ create_env() {
     # A new pytorch env costs ~ 300Mb
     exported_env=/tmp/${MAMBA_DEFAULT_ENV}.yaml
     micromamba env export -n ${MAMBA_DEFAULT_ENV} > "${exported_env}"
-    micromamba create -n comfyui --file "${exported_env}"
+    $MAMBA_CREATE -n comfyui --file "${exported_env}"
     
     # RunPod serverless support
-    micromamba create -n serverless -c defaults python=3.10
+    $MAMBA_CREATE -n serverless -c defaults python=3.10
     micromamba run -n serverless $PIP_INSTALL \
         runpod
 }
