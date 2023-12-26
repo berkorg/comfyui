@@ -8,7 +8,7 @@ comfyui_git="https://github.com/comfyanonymous/ComfyUI"
 main() {
     create_env
     install_jupyter_kernels
-    clone_comfyui
+    # clone_comfyui
 }
 
 create_env() {
@@ -22,10 +22,10 @@ create_env() {
     # A new pytorch env costs ~ 300Mb
     exported_env=/tmp/${MAMBA_DEFAULT_ENV}.yaml
     micromamba env export -n ${MAMBA_DEFAULT_ENV} > "${exported_env}"
-    $MAMBA_CREATE -n comfyui --file "${exported_env}"
+    micromamba create -n comfyui --file "${exported_env}"
     
     # RunPod serverless support
-    $MAMBA_CREATE -n serverless -c defaults python=3.10
+    micromamba create -n serverless -c defaults python=3.10
     micromamba run -n serverless $PIP_INSTALL \
         runpod
 }
@@ -61,9 +61,9 @@ install_jupyter_kernels() {
     fi
 }
 
-clone_comfyui() {
-    cd /opt
-    git clone ${comfyui_git}
-}
+# clone_comfyui() {
+#     cd /opt
+#     git clone ${comfyui_git}
+# }
 
 main "$@"; exit
